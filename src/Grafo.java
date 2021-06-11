@@ -170,12 +170,12 @@ public class Grafo {
             return "No hay nodos";
         }
         if(vertice == vertice){
-            return "- " + vertice.dato + " -";
+            return "/ " + vertice.dato + " /";
         }
-        for(NodoVertice temp = vertice; temp.sig!=null; temp=temp.sig){
-            Cadena+=" - "+temp.dato;
+        for(NodoVertice temp = vertice; temp.sig !=null ; temp=temp.sig){
+            Cadena+=" / "+temp.dato;
         }
-        return Cadena+" - "+vertice.dato+" -";
+        return Cadena+" / "+vertice.dato+" /";
 
     }
     
@@ -188,7 +188,7 @@ public class Grafo {
         }
         
         if(N.arista.abajo == null){ // una sola arista en el vertice
-            Cadena = "Nodo: "+  N.dato+"\n - "+N.arista.direccion.dato+" -";
+            Cadena = "Nodo: "+  N.dato+"\n / "+N.arista.direccion.dato+" /";
             return Cadena;
         }
         
@@ -196,7 +196,7 @@ public class Grafo {
         
         for(NodoArista temp = N.arista; temp != null; temp = temp.abajo){ // mas de una aristaaaa
             
-            Cadena += temp.direccion.dato+" - ";
+            Cadena += temp.direccion.dato+" / ";
             
         }
        return Cadena;
